@@ -108,11 +108,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header shadow p-3 mb-3">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Todo</h1>
+          <h1 className="App-title">TODO Demo App. | With <i className="text-warning"> CRUD with API.</i></h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h2 className="App-intro">
+          Get to, add, edit <b className="text-info">Todos</b> and save to reload.
+        </h2>
         <div className="container-fluid mb-3">
           {
             this.state.notification &&
@@ -121,12 +121,12 @@ class App extends Component {
             </div>
           }
           <div className="card shadow p-3 mb-5 bg-white rounded">
-          <h3 className="text-center text-info"><b>Todos App</b></h3>
+          
             <div className="card-body">
               <input 
                 type="text"
                 name="todo"
-                className="form-control mb-3"
+                className="form-control mb-3 shadow-sm"
                 placeholder="Add a new todo"
                 onChange={this.handlerChange}
                 value={this.state.newTodo}
@@ -134,7 +134,7 @@ class App extends Component {
               <button 
                 onClick={this.state.editing ? this.updateTodo : this.addTodo}
                 title="Add a new Or Edit Todo"
-                className="btn btn-outline-success btn-sm form-control mb-3"
+                className="btn btn-outline-success btn-sm form-control mb-3 shadow-sm"
                 disabled={this.state.newTodo.length < 5}
                 > 
                  {this.state.editing ? 'Update Todo' : 'Add Todo'}
